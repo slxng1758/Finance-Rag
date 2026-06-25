@@ -1,7 +1,20 @@
-langchain==0.1.0
-langchain-community
-chromadb
-pypdf
+# Core (M1-M6) — fully free/local, no API keys required
+requests
+beautifulsoup4
+lxml
+numpy
+scipy
 sentence-transformers
+ollama
+fastapi
+uvicorn[standard]
+pydantic
 streamlit
-python-dotenv
+pytest
+
+# Stretch-only (M7) — leave commented out unless building the optional Q&A layer
+# chromadb
+# rank_bm25
+# pdfplumber
+# tiktoken
+# ragas
