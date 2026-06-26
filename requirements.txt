@@ -6,15 +6,21 @@ numpy
 scipy
 sentence-transformers
 ollama
-fastapi
-uvicorn[standard]
-pydantic
 streamlit
 pytest
 
-# Stretch-only (M7) — leave commented out unless building the optional Q&A layer
-# chromadb
+# Q&A layer (M7) — local PDF ingestion + retrieval (app.py, ingest.py)
+langchain
+langchain-classic
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+langchain-chroma
+langchain-ollama
+chromadb
+pypdf
+
+# Stretch-only — leave commented out unless building these specifically
 # rank_bm25
-# pdfplumber
 # tiktoken
 # ragas

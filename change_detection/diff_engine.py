@@ -93,7 +93,7 @@ def diff_sections(old_paragraphs: list[str], new_paragraphs: list[str]) -> list[
                     ParagraphChange("added", None, new_pool[c], None, new_pool_idx[c], None)
                 )
                 continue
-            reordered = r != c  # position within the pool lists drifted -> moved, not edited in place
+            reordered = bool(r != c)  # position within the pool lists drifted -> moved, not edited in place
             changes.append(
                 ParagraphChange(
                     "modified",

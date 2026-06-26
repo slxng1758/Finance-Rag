@@ -3,10 +3,10 @@ Financial RAG Assistant - Streamlit UI
 """
 
 import streamlit as st
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.chains import RetrievalQA
-from langchain.llms import Ollama
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_chroma import Chroma
+from langchain_classic.chains import RetrievalQA
+from langchain_ollama import OllamaLLM
 import os
 
 # Page configuration
@@ -51,7 +51,7 @@ def load_qa_chain():
     )
     
     # Setup LLM
-    llm = Ollama(
+    llm = OllamaLLM(
         model="llama3.2",
         temperature=0.1
     )
